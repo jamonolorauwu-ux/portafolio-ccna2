@@ -11,15 +11,15 @@
 ## ***TABLAS DE DIRECCIONAMIENTO***
 <br>
 
-| DISPOSITIVO | PUERTOS |
-| ----------- | ------- |
-| R1-Core | `g0/0/0` `fa0/10` |
-| SW-Lab1 | `g0/1` `g0/1` |
-| SW-Lab2 | `g0/2` `g0/2` |
-| PC14 GESTIÓN | `fa0/9` |
-| PC ADMIN | `fa0/1`, `fa0/2`, `fa0/3`  |
-| PC ALUMNOS | `fa0/4`, `fa0/5`, `fa0/6` |
-| PC DIRECCIÓN |  `fa0/7` |
+| DISPOSITIVO | PUERTOS | CONECTADOS A | PUERTOS |
+| ----------- | ------- | ------------ | ------- |
+| R1-Core | `g0/0/0` | SW-Core | `fa0/10` |
+| SW-Lab1 | `g0/1` | SW-Core | `g0/1` |
+| SW-Lab2 | `g0/2` | SW-Core | `g0/2` |
+| PC14 GESTIÓN | `fa0/0` | SW-Core | `fa0/9` |
+| PC ADMIN | `fa0/0`  | SW-Lab1 - 2 | `fa0/1 - 3` |
+| PC ALUMNOS | `fa0/0` | SW-Lab1 - 2 | `fa0/4 - 6` |
+| PC DIRECCIÓN |  `fa0/0` | SW-Lab1 - 2 | `fa0/7` |
 
 <br>
 
