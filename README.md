@@ -21,7 +21,6 @@
 | PC ALUMNOS | ``fa0/4``, ``fa0/5``, ``fa0/6`` |
 | PC DIRECCIÓN |  ``fa0/7``|
 <br>
-<br>
 
 ## ***CONFIGURACIÓN DE LOS DISPOSITIVOS***
 
@@ -31,7 +30,6 @@
 
 ### **SWITCH (SW-Core)**
 #### **PC 14 GESTIÓN**
-
 <br>
 <br>
 
@@ -66,8 +64,6 @@ Switch(config-if)#switchport mode access
 Switch(config-if)#switchport access vlan 30
 Switch(config-if)#end
 ````
-<br>
-
 #### **PC 0 ADMIN**
 #### **PC 1 ADMIN**
 #### **PC 2 ADMIN**
