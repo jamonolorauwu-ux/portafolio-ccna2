@@ -20,6 +20,7 @@
 | PC ADMIN | ``fa0/1``, ``fa0/2``, ``fa0/3``  |
 | PC ALUMNOS | ``fa0/4``, ``fa0/5``, ``fa0/6`` |
 | PC DIRECCIÓN |  ``fa0/7``|
+
 <br>
 
 ## ***CONFIGURACIÓN DE LOS DISPOSITIVOS***
