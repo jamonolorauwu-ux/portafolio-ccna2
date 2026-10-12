@@ -37,8 +37,6 @@
 ### **SWITCH (SW-Lab1)**
 ##### VLANs & PUERTOS
 
-https://github.com/oltukii/portafolio-ccna2/tree/716149d6ce910f68f98c40c4c074d50f7c6b0108/SW-Lab1
-
 ````
 Switch>enable
 Switch#configure terminal
