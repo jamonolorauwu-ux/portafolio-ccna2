@@ -13,13 +13,13 @@
 
 | DISPOSITIVO | PUERTOS |
 | ----------- | ------- |
-| R1-Core | ``g0/0/0`` ``fa0/10`` |
-| SW-Lab1 | ``g0/1`` ``g0/1`` |
-| SW-Lab2 | ``g0/2`` ``g0/2`` |
-| PC14 GESTIÓN | ``fa0/9`` |
-| PC ADMIN | ``fa0/1``, ``fa0/2``, ``fa0/3``  |
-| PC ALUMNOS | ``fa0/4``, ``fa0/5``, ``fa0/6`` |
-| PC DIRECCIÓN |  ``fa0/7`` |
+| R1-Core | `g0/0/0` `fa0/10` |
+| SW-Lab1 | `g0/1` `g0/1` |
+| SW-Lab2 | `g0/2` `g0/2` |
+| PC14 GESTIÓN | `fa0/9` |
+| PC ADMIN | `fa0/1`, `fa0/2`, `fa0/3`  |
+| PC ALUMNOS | `fa0/4`, `fa0/5`, `fa0/6` |
+| PC DIRECCIÓN |  `fa0/7` |
 
 <br>
 
