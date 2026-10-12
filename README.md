@@ -36,6 +36,8 @@
 
 ### **SWITCH (SW-Lab1)**
 ##### VLANs & PUERTOS
+
+
 ````
 Switch>enable
 Switch#configure terminal
