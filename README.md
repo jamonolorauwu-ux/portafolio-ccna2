@@ -26,6 +26,15 @@
 ## ***CONFIGURACIÓN DE LOS DISPOSITIVOS***
 
 ### **ROUTER (R1-Core)**
+````
+Router>enable
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname R1-Core-JMHA
+R1-Core-JMHA(config)#enable secret CHOCOCHOCO
+R1-Core-JMHA(config)#service password-encryption
+R1-Core-JMHA(config)#banner motd #ACCESO
+````
 <br>
 <br>
 
