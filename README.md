@@ -82,59 +82,31 @@ Password:
 R1-Core-JMHA>enable
 Password: 
 R1-Core-JMHA#configure terminal
-Enter configuration commands, one per line.  End with CNTL/Z.
 R1-Core-JMHA(config)#interface gi0/0/0
 R1-Core-JMHA(config-if)#no ip address
 R1-Core-JMHA(config-if)#no shutdown
 R1-Core-JMHA(config-if)#exit
 R1-Core-JMHA(config)#interface gi0/0/0.10
-R1-Core-JMHA(config-subif)#
-%LINK-3-UPDOWN: Interface GigabitEthernet0/0/0.10, changed state to down
-
-%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0.10, changed state to up
-
 R1-Core-JMHA(config-subif)#encapsulation dot1Q 10
 R1-Core-JMHA(config-subif)#ip address 192.168.10.254 255.255.255.0
 R1-Core-JMHA(config-subif)#exit
 R1-Core-JMHA(config)#interface gi0/0/0.20
-R1-Core-JMHA(config-subif)#
-%LINK-3-UPDOWN: Interface GigabitEthernet0/0/0.20, changed state to down
-
-%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0.20, changed state to up
-
 R1-Core-JMHA(config-subif)#encapsulation dot1Q 20
 R1-Core-JMHA(config-subif)#ip address 192.168.20.254 255.255.255.0
 R1-Core-JMHA(config-subif)#exit
 R1-Core-JMHA(config)#interface gi0/0/0.30
-R1-Core-JMHA(config-subif)#
-%LINK-3-UPDOWN: Interface GigabitEthernet0/0/0.30, changed state to down
-
-%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0.30, changed state to up
-
 R1-Core-JMHA(config-subif)#encapsulation dot1Q 30
 R1-Core-JMHA(config-subif)#ip address 192.168.30.254 255.255.255.0
 R1-Core-JMHA(config-subif)#exit
 R1-Core-JMHA(config)#interface gi0/0/0.99
-R1-Core-JMHA(config-subif)#
-%LINK-3-UPDOWN: Interface GigabitEthernet0/0/0.99, changed state to down
-
-%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0.99, changed state to up
-
 R1-Core-JMHA(config-subif)#encapsulation dot1Q 99
 R1-Core-JMHA(config-subif)#ip address 192.168.99.254 255.255.255.0
 R1-Core-JMHA(config-subif)#exit
 R1-Core-JMHA(config)#interface gi0/0/0.111
-R1-Core-JMHA(config-subif)#
-%LINK-3-UPDOWN: Interface GigabitEthernet0/0/0.111, changed state to down
-
-%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0.111, changed state to up
-
 R1-Core-JMHA(config-subif)#encapsulation dot1Q 111 native
 R1-Core-JMHA(config-subif)#no ip address
 R1-Core-JMHA(config-subif)#exit
 R1-Core-JMHA(config)#end
-R1-Core-JMHA#
-%SYS-5-CONFIG_I: Configured from console by console
 ````
 <br>
 
@@ -142,7 +114,6 @@ R1-Core-JMHA#
 ````bash
 Switch>enable
 Switch#configure terminal
-Enter configuration commands, one per line.  End with CNTL/Z.
 Switch(config)#hostname SW-Core-JMHA
 SW-Core-JMHA(config)#enable secret CHOCO
 SW-Core-JMHA(config)#service password-encryption
@@ -151,11 +122,8 @@ SW-Core-JMHA(config)#line console 0
 SW-Core-JMHA(config-line)#password CHOCO
 SW-Core-JMHA(config-line)#login
 SW-Core-JMHA(config-line)#end
-SW-Core-JMHA#
-%SYS-5-CONFIG_I: Configured from console by console
 
 SW-Core-JMHA#configure terminal
-Enter configuration commands, one per line.  End with CNTL/Z.
 SW-Core-JMHA(config)#vlan 10
 SW-Core-JMHA(config-vlan)#name ADMIN
 SW-Core-JMHA(config-vlan)#exit
@@ -164,10 +132,6 @@ SW-Core-JMHA(config-vlan)#name ALUMNOS
 SW-Core-JMHA(config-vlan)#exit
 SW-Core-JMHA(config)#vlan 30
 SW-Core-JMHA(config-vlan)#name DIRECCION
-SW-Core-JMHA(config-vlan)#exut
-                            ^
-% Invalid input detected at '^' marker.
-	
 SW-Core-JMHA(config-vlan)#exit
 SW-Core-JMHA(config)#vlan 99
 SW-Core-JMHA(config-vlan)#name GESTION
@@ -180,9 +144,31 @@ SW-Core-JMHA(config-vlan)#name blackhole
 SW-Core-JMHA(config-vlan)#exit
 SW-Core-JMHA(config)#end
 SW-Core-JMHA#
-%SYS-5-CONFIG_I: Configured from console by console
-
-SW-Core-JMHA#
+SW-Core-JMHA#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW-Core-JMHA(config)#interface fa0/10
+SW-Core-JMHA(config-if)#switchport mode trunk
+SW-Core-JMHA(config-if)#
+SW-Core-JMHA(config-if)#switchport trunk native vlan 111
+SW-Core-JMHA(config-if)#switchport trunk allowed vlan 10,20,30,99,111
+SW-Core-JMHA(config-if)#no shutdown
+SW-Core-JMHA(config-if)#exit
+SW-Core-JMHA(config)#interface fa0/9
+SW-Core-JMHA(config-if)#switchport mode access
+SW-Core-JMHA(config-if)#switchport access vlan 99
+SW-Core-JMHA(config-if)#no shutdown
+SW-Core-JMHA(config-if)#exit
+SW-Core-JMHA(config)#interface range fa0/1 - 8, fa0/11 - 24
+SW-Core-JMHA(config-if-range)#switchport mode access
+SW-Core-JMHA(config-if-range)#switchport access vlan 999
+SW-Core-JMHA(config-if-range)#shutdown
+SW-Core-JMHA(config-if-range)#exit
+SW-Core-JMHA(config)#interface vlan 99
+SW-Core-JMHA(config-if)#ip address 192.168.99.1 255.255.255.0
+SW-Core-JMHA(config-if)#no shutdown
+SW-Core-JMHA(config-if)#exit
+SW-Core-JMHA(config)#ip default-gateway 192.168.99.254
+SW-Core-JMHA(config)#end
 ````
 <br>
 
