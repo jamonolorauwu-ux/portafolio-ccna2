@@ -33,7 +33,11 @@ Enter configuration commands, one per line.  End with CNTL/Z.
 Router(config)#hostname R1-Core-JMHA
 R1-Core-JMHA(config)#enable secret CHOCOCHOCO
 R1-Core-JMHA(config)#service password-encryption
-R1-Core-JMHA(config)#banner motd #ACCESO
+R1-Core-JMHA(config)#banner motd #ACCESO REESTRINGIDO#
+R1-Core-JMHA(config)#line console 0
+R1-Core-JMHA(config-line)#password CHOCOCHOCO
+R1-Core-JMHA(config-line)#login
+R1-Core-JMHA(config-line)#exit
 ````
 <br>
 <br>
