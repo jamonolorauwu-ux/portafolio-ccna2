@@ -11,6 +11,7 @@
 ## ***TABLAS DE DIRECCIONAMIENTO***
 
 ### PUERTOS
+
 | DISPOSITIVO | PUERTOS | CONECTADOS A | PUERTOS |
 | ----------- | ------- | ------------ | ------- |
 | R1-Core | `g0/0/0` | SW-Core | `fa0/10` |
@@ -22,6 +23,7 @@
 | PC DIRECCIÓN |  `fa0/0` | SW-Lab1 - 2   | `fa0/7` |
 
 ### SW-Lab1
+
 | PCs | IP | IP | MÁSCARA |
 | --- | -- | -- | ------- |
 | PC 0 ADMIN | | | |
@@ -33,6 +35,7 @@
 | PC 6 DIRECCION | | | |
 
 ### SW-Lab2
+
 | PCs | IP | IP | MÁSCARA |
 | --- | -- | -- | ------- |
 | PC 7 ADMIN | | | |
@@ -44,6 +47,7 @@
 | PC 13 DIRECCION | | | |
 
 ### SW-Core
+
 | PCs | IP | IP | MÁSCARA |
 | --- | -- | -- | ------- |
 | PC 14 GESTION | | | |
