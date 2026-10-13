@@ -21,6 +21,35 @@
 | PC ALUMNOS | `fa0/0` | SW-Lab1 - 2 | `fa0/4 - 6` |
 | PC DIRECCIÓN |  `fa0/0` | SW-Lab1 - 2 | `fa0/7` |
 
+### SW-Lab1
+| PCs | IP | IP | MÁSCARA |
+| --- | -- | -- | ------- |
+| PC 0 ADMIN | | | |
+| PC 1 ADMIN | | | |
+| PC 2 ADMIN | | | |
+| PC 3 ADMINISTRACION | | | |
+| PC 4 ADMINISTRACION | | | |
+| PC 5 ADMINISTRACION | | | |
+| PC 6 DIRECCION | | | |
+
+### SW-Lab2
+| PCs | IP | IP | MÁSCARA |
+| --- | -- | -- | ------- |
+| PC 7 ADMIN | | | |
+| PC 8 ADMIN | | | |
+| PC 9 ADMIN | | | |
+| PC 10 ALUMNOS | | | |
+| PC 11 ALUMNOS | | | |
+| PC 12 ALUMNOS | | | |
+| PC 13 DIRECCION | | | |
+
+### SW-Core
+| PCs | IP | IP | MÁSCARA |
+| --- | -- | -- | ------- |
+| PC 14 GESTION | | | |
+
+
+
 <br>
 
 ## ***CONFIGURACIÓN DE LOS DISPOSITIVOS***
@@ -40,12 +69,10 @@ R1-Core-JMHA(config-line)#login
 R1-Core-JMHA(config-line)#exit
 ````
 <br>
-<br>
 
 ### **SWITCH (SW-Core)**
-#### **PC 14 GESTIÓN**
 <br>
-<br>
+
 
 ### **SWITCH (SW-Lab1)**
 ##### VLANs & PUERTOS
@@ -79,18 +106,6 @@ Switch(config-if)#switchport mode access
 Switch(config-if)#switchport access vlan 30
 Switch(config-if)#end
 ````
-#### **PC 0 ADMIN**
-#### **PC 1 ADMIN**
-#### **PC 2 ADMIN**
-<br>
-
-#### **PC 3 ALUMNOS**
-#### **PC 4 ALUMNOS**
-#### **PC 5 ALUMNOS**
-<br>
-
-#### **PC 6 DIRECCIÓN**
-<br>
 <br>
 
 ### **SWITCH (R1-Lab2)**
@@ -126,17 +141,6 @@ Switch(config-if)#end
 ````
 <br>
 
-#### **PC 7 ADMIN**
-#### **PC 8 ADMIN**
-#### **PC 9 ADMIN**
-<br>
-
-#### **PC 10 ALUMNOS**
-#### **PC 11 ALUMNOS**
-#### **PC 12 ALUMNOS**
-<br>
-
-#### **PC 13 DIRECCIÓN**
 
 
 
