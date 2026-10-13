@@ -140,7 +140,21 @@ R1-Core-JMHA#
 
 ### **SWITCH (SW-Core)**
 ````bash
+Switch>enable
+Switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname SW-Core-JMHA
+SW-Core-JMHA(config)#enable secret CHOCO
+SW-Core-JMHA(config)#service password-encryption
+SW-Core-JMHA(config)#banner motd #ACCESO REESTRINGIDO#
+SW-Core-JMHA(config)#line console 0
+SW-Core-JMHA(config-line)#password CHOCO
+SW-Core-JMHA(config-line)#login
+SW-Core-JMHA(config-line)#end
+SW-Core-JMHA#
+%SYS-5-CONFIG_I: Configured from console by console
 
+SW-Core-JMHA#
 ````
 <br>
 
