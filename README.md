@@ -116,7 +116,21 @@ R1-Core-JMHA(config-subif)#
 
 %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0.99, changed state to up
 
-R1-Core-JMHA(config-subif)#encapsulation
+R1-Core-JMHA(config-subif)#encapsulation dot1Q 99
+R1-Core-JMHA(config-subif)#ip address 192.168.99.254 255.255.255.0
+R1-Core-JMHA(config-subif)#exit
+R1-Core-JMHA(config)#interface gi0/0/0.111
+R1-Core-JMHA(config-subif)#
+%LINK-3-UPDOWN: Interface GigabitEthernet0/0/0.111, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0.111, changed state to up
+
+R1-Core-JMHA(config-subif)#encapsulation dot1Q 111 native
+R1-Core-JMHA(config-subif)#no ip address
+R1-Core-JMHA(config-subif)#exit
+R1-Core-JMHA(config)#end
+R1-Core-JMHA#
+%SYS-5-CONFIG_I: Configured from console by console
 ````
 <br>
 
