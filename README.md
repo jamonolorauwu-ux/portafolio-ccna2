@@ -19,7 +19,7 @@
 | PC14 GESTIÓN | `fa0/0` | SW-Core | `fa0/9` |
 | PC ADMIN | `fa0/0`  | SW-Lab1 - 2 | `fa0/1 - 3` |
 | PC ALUMNOS | `fa0/0` | SW-Lab1 - 2 | `fa0/4 - 6` |
-| PC DIRECCIÓN |  `fa0/0` | SW-Lab1 - 2 | `fa0/7` |
+| PC DIRECCIÓN |  `fa0/0` | SW-Lab1 - 2   | `fa0/7` |
 
 ### SW-Lab1
 | PCs | IP | IP | MÁSCARA |
@@ -135,6 +135,24 @@ R1-Core-JMHA#
 <br>
 
 ### **SWITCH (SW-Core)**
+````bash
+Switch>enable
+Switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname SW-Core-JMHA
+SW-Core-JMHA(config)#enable secret CHOCOCHOCO
+SW-Core-JMHA(config)#service password-encryption
+SW-Core-JMHA(config)#banner motd #ACCESO REESTRINGIDO#
+SW-Core-JMHA(config)#line console 0
+SW-Core-JMHA(config-line)#password CHOCOCHOCO
+SW-Core-JMHA(config-line)#login
+SW-Core-JMHA(config-line)#exit
+SW-Core-JMHA(config)#end
+SW-Core-JMHA#
+%SYS-5-CONFIG_I: Configured from console by console
+
+SW-Core-JMHA#
+````
 <br>
 
 
