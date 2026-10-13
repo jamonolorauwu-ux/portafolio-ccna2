@@ -154,6 +154,34 @@ SW-Core-JMHA(config-line)#end
 SW-Core-JMHA#
 %SYS-5-CONFIG_I: Configured from console by console
 
+SW-Core-JMHA#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW-Core-JMHA(config)#vlan 10
+SW-Core-JMHA(config-vlan)#name ADMIN
+SW-Core-JMHA(config-vlan)#exit
+SW-Core-JMHA(config)#vlan 20
+SW-Core-JMHA(config-vlan)#name ALUMNOS
+SW-Core-JMHA(config-vlan)#exit
+SW-Core-JMHA(config)#vlan 30
+SW-Core-JMHA(config-vlan)#name DIRECCION
+SW-Core-JMHA(config-vlan)#exut
+                            ^
+% Invalid input detected at '^' marker.
+	
+SW-Core-JMHA(config-vlan)#exit
+SW-Core-JMHA(config)#vlan 99
+SW-Core-JMHA(config-vlan)#name GESTION
+SW-Core-JMHA(config-vlan)#exit
+SW-Core-JMHA(config)#vlan 111
+SW-Core-JMHA(config-vlan)#name native
+SW-Core-JMHA(config-vlan)#exit
+SW-Core-JMHA(config)#vlan 999
+SW-Core-JMHA(config-vlan)#name blackhole
+SW-Core-JMHA(config-vlan)#exit
+SW-Core-JMHA(config)#end
+SW-Core-JMHA#
+%SYS-5-CONFIG_I: Configured from console by console
+
 SW-Core-JMHA#
 ````
 <br>
