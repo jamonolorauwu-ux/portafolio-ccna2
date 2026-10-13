@@ -68,6 +68,56 @@ R1-Core-JMHA(config-line)#password CHOCOCHOCO
 R1-Core-JMHA(config-line)#login
 R1-Core-JMHA(config-line)#exit
 ````
+````bash
+ACCESO REESTRINGIDO
+
+User Access Verification
+
+Password: 
+
+R1-Core-JMHA>enable
+Password: 
+R1-Core-JMHA#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1-Core-JMHA(config)#interface gi0/0/0
+R1-Core-JMHA(config-if)#no ip address
+R1-Core-JMHA(config-if)#no shutdown
+R1-Core-JMHA(config-if)#exit
+R1-Core-JMHA(config)#interface gi0/0/0.10
+R1-Core-JMHA(config-subif)#
+%LINK-3-UPDOWN: Interface GigabitEthernet0/0/0.10, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0.10, changed state to up
+
+R1-Core-JMHA(config-subif)#encapsulation dot1Q 10
+R1-Core-JMHA(config-subif)#ip address 192.168.10.254 255.255.255.0
+R1-Core-JMHA(config-subif)#exit
+R1-Core-JMHA(config)#interface gi0/0/0.20
+R1-Core-JMHA(config-subif)#
+%LINK-3-UPDOWN: Interface GigabitEthernet0/0/0.20, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0.20, changed state to up
+
+R1-Core-JMHA(config-subif)#encapsulation dot1Q 20
+R1-Core-JMHA(config-subif)#ip address 192.168.20.254 255.255.255.0
+R1-Core-JMHA(config-subif)#exit
+R1-Core-JMHA(config)#interface gi0/0/0.30
+R1-Core-JMHA(config-subif)#
+%LINK-3-UPDOWN: Interface GigabitEthernet0/0/0.30, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0.30, changed state to up
+
+R1-Core-JMHA(config-subif)#encapsulation dot1Q 30
+R1-Core-JMHA(config-subif)#ip address 192.168.30.254 255.255.255.0
+R1-Core-JMHA(config-subif)#exit
+R1-Core-JMHA(config)#interface gi0/0/0.99
+R1-Core-JMHA(config-subif)#
+%LINK-3-UPDOWN: Interface GigabitEthernet0/0/0.99, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0.99, changed state to up
+
+R1-Core-JMHA(config-subif)#encapsulation
+````
 <br>
 
 ### **SWITCH (SW-Core)**
