@@ -55,7 +55,7 @@
 ## ***CONFIGURACIÓN DE LOS DISPOSITIVOS***
 
 ### **ROUTER (R1-Core)**
-````
+````bash
 Router>enable
 Router#configure terminal
 Enter configuration commands, one per line.  End with CNTL/Z.
@@ -77,7 +77,7 @@ R1-Core-JMHA(config-line)#exit
 ### **SWITCH (SW-Lab1)**
 ##### VLANs & PUERTOS
 
-````
+````bash
 Switch>enable
 Switch#configure terminal
 Enter configuration commands, one per line.  End with CNTL/Z.
@@ -110,7 +110,7 @@ Switch(config-if)#end
 
 ### **SWITCH (R1-Lab2)**
 ##### VLANs & PUERTOS
-````
+````bash
 Switch>enable
 Switch#configure terminal
 Enter configuration commands, one per line.  End with CNTL/Z.
