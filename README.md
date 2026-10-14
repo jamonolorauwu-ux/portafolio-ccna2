@@ -191,7 +191,6 @@ Switch(config-vlan)#name DIRECCION
 Switch(config-vlan)#end
 Switch#
 Switch#configure terminal
-Enter configuration commands, one per line.  End with CNTL/Z.
 Switch(config)#interface range fa0/1 - 3
 Switch(config-if-range)#switchport mode access
 Switch(config-if-range)#switchport access vlan 10
@@ -204,6 +203,15 @@ Switch(config)#interface fa0/7
 Switch(config-if)#switchport mode access
 Switch(config-if)#switchport access vlan 30
 Switch(config-if)#end
+Switch#configure terminal
+Switch(config)#hostname SW-Lab1-JMHA
+SW-Lab1-JMHA(config)#enable secret CHOCO
+SW-Lab1-JMHA(config)#service password-encryption
+SW-Lab1-JMHA(config)#banner motd #ACCESO REESTRINGIDO#
+SW-Lab1-JMHA(config)#line console 0
+SW-Lab1-JMHA(config-line)#password CHOCO
+SW-Lab1-JMHA(config-line)#login
+SW-Lab1-JMHA(config-line)#end
 ````
 <br>
 
