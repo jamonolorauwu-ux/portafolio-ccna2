@@ -145,7 +145,6 @@ SW-Core-JMHA(config-vlan)#exit
 SW-Core-JMHA(config)#end
 SW-Core-JMHA#
 SW-Core-JMHA#configure terminal
-Enter configuration commands, one per line.  End with CNTL/Z.
 SW-Core-JMHA(config)#interface fa0/10
 SW-Core-JMHA(config-if)#switchport mode trunk
 SW-Core-JMHA(config-if)#
