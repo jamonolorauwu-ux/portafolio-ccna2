@@ -24,33 +24,33 @@
 
 ### SW-Lab1
 
-| PCs | IP | IP | MÁSCARA |
+| PCs | IPv4 | IP | MÁSCARA |
 | --- | -- | -- | ------- |
-| PC 0 ADMIN | | | |
-| PC 1 ADMIN | | | |
-| PC 2 ADMIN | | | |
-| PC 3 ADMINISTRACION | | | |
-| PC 4 ADMINISTRACION | | | |
-| PC 5 ADMINISTRACION | | | |
-| PC 6 DIRECCION | | | |
+| PC 0 ADMIN | 192.168.10.1 | | |
+| PC 1 ADMIN | 192.168.10.2 | | |
+| PC 2 ADMIN | 192.168.10.3 | | |
+| PC 3 ADMINISTRACION | 192.168.20.1 | | |
+| PC 4 ADMINISTRACION | 192.168.20.2 | | |
+| PC 5 ADMINISTRACION | 192.168.20.3 | | |
+| PC 6 DIRECCION | 192.168.30.1 | | |
 
 ### SW-Lab2
 
-| PCs | IP | IP | MÁSCARA |
+| PCs | IPv4 |  | MÁSCARA |
 | --- | -- | -- | ------- |
-| PC 7 ADMIN | | | |
-| PC 8 ADMIN | | | |
-| PC 9 ADMIN | | | |
-| PC 10 ALUMNOS | | | |
-| PC 11 ALUMNOS | | | |
-| PC 12 ALUMNOS | | | |
-| PC 13 DIRECCION | | | |
+| PC 7 ADMIN | 192.168.10.1 | | |
+| PC 8 ADMIN | 192.168.10.2 | | |
+| PC 9 ADMIN | 192.168.10.3 | | |
+| PC 10 ALUMNOS | 192.168.20.1 | | |
+| PC 11 ALUMNOS | 192.168.20.2 | | |
+| PC 12 ALUMNOS | 192.168.20.3 | | |
+| PC 13 DIRECCION | 192.168.30.1 | | |
 
 ### SW-Core
 
-| PCs | IP | IP | MÁSCARA |
+| PCs | IPv4 | IP | MÁSCARA |
 | --- | -- | -- | ------- |
-| PC 14 GESTION | | | |
+| PC 14 GESTION | 192.168.99.4 | | |
 
 
 
