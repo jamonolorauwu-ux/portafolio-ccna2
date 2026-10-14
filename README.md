@@ -222,6 +222,19 @@ SW-Lab1-JMHA(config-vlan)#exit
 SW-Lab1-JMHA(config)#vlan 999
 SW-Lab1-JMHA(config-vlan)#name balckhole
 SW-Lab1-JMHA(config-vlan)#end
+SW-Lab1-JMHA#configure terminal
+SW-Lab1-JMHA(config)#interface range fa0/1 - 3
+SW-Lab1-JMHA(config-if-range)#no shutdown
+SW-Lab1-JMHA(config-if-range)#exit
+SW-Lab1-JMHA(config)#interface range fa0/4 - 7
+SW-Lab1-JMHA(config-if-range)#no shutdown
+SW-Lab1-JMHA(config-if-range)#exit
+SW-Lab1-JMHA(config)#interface gi0/1
+SW-Lab1-JMHA(config-if)#switchport mode trunk
+SW-Lab1-JMHA(config-if)#switchport trunk native vlan 111
+SW-Lab1-JMHA(config-if)#switchport trunk allowed vlan 10,20,30,99,111
+SW-Lab1-JMHA(config-if)#no shutdown
+SW-Lab1-JMHA(config-if)#end
 ````
 <br>
 
