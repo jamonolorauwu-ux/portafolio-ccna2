@@ -71,16 +71,6 @@ R1-Core-JMHA(config)#line console 0
 R1-Core-JMHA(config-line)#password CHOCOCHOCO
 R1-Core-JMHA(config-line)#login
 R1-Core-JMHA(config-line)#exit
-````
-````bash
-ACCESO REESTRINGIDO
-
-User Access Verification
-
-Password: 
-
-R1-Core-JMHA>enable
-Password: 
 R1-Core-JMHA#configure terminal
 R1-Core-JMHA(config)#interface gi0/0/0
 R1-Core-JMHA(config-if)#no ip address
