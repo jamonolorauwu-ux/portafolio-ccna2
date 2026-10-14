@@ -237,7 +237,6 @@ SW-Lab1-JMHA(config-if)#end
 <br>
 
 ### **SWITCH (R1-Lab2)**
-##### VLANs & PUERTOS
 ````bash
 
 ````
