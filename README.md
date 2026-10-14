@@ -233,12 +233,56 @@ SW-Lab1-JMHA(config-if)#switchport trunk native vlan 111
 SW-Lab1-JMHA(config-if)#switchport trunk allowed vlan 10,20,30,99,111
 SW-Lab1-JMHA(config-if)#no shutdown
 SW-Lab1-JMHA(config-if)#end
+SW-Lab1-JMHA>enable
+SW-Lab1-JMHA#configure terminal
+SW-Lab1-JMHA(config)#interface vlan 99
+SW-Lab1-JMHA(config-if)#ip address 192.168.99.2 255.255.255.0
+SW-Lab1-JMHA(config-if)#no shutdown
+SW-Lab1-JMHA(config-if)#exit
+SW-Lab1-JMHA(config)#ip default-gateway 192.168.99.254
+SW-Lab1-JMHA(config)#interface range fa0/8 - 24
+SW-Lab1-JMHA(config-if-range)#switchport mode access
+SW-Lab1-JMHA(config-if-range)#switchport access vlan 999
+SW-Lab1-JMHA(config-if-range)#shutdown
+SW-Lab1-JMHA(config-if-range)#end
 ````
 <br>
 
 ### **SWITCH (R1-Lab2)**
 ````bash
+Switch>enable
+Switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname SW-Lab2-JMHA
+SW-Lab2-JMHA(config)#enable secret CHOCO
+SW-Lab2-JMHA(config)#service password-encryption
+SW-Lab2-JMHA(config)#banner motd #ACCESO REESTRINGIDO#
+SW-Lab2-JMHA(config)#line console 0
+SW-Lab2-JMHA(config-line)#password CHOCO
+SW-Lab2-JMHA(config-line)#login
+SW-Lab2-JMHA(config-line)#exit
+SW-Lab2-JMHA(config)#vlan 10
+SW-Lab2-JMHA(config-vlan)#name ADMIN
+SW-Lab2-JMHA(config-vlan)#exit
+SW-Lab2-JMHA(config)#vlan 20
+SW-Lab2-JMHA(config-vlan)#name ALUMNOS
+SW-Lab2-JMHA(config-vlan)#exit
+SW-Lab2-JMHA(config)#vlan 30
+SW-Lab2-JMHA(config-vlan)#name DIRECCION
+SW-Lab2-JMHA(config-vlan)#exit
+SW-Lab2-JMHA(config)#vlan 99
+SW-Lab2-JMHA(config-vlan)#name GESTION
+SW-Lab2-JMHA(config-vlan)#exit
+SW-Lab2-JMHA(config)#vlan 111
+SW-Lab2-JMHA(config-vlan)#name native
+SW-Lab2-JMHA(config-vlan)#exit
+SW-Lab2-JMHA(config)#vlan 999
+SW-Lab2-JMHA(config-vlan)#name blackhole
+SW-Lab2-JMHA(config-vlan)#end
+SW-Lab2-JMHA#
+%SYS-5-CONFIG_I: Configured from console by console
 
+SW-Lab2-JMHA#
 ````
 <br>
 
