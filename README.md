@@ -212,6 +212,16 @@ SW-Lab1-JMHA(config)#line console 0
 SW-Lab1-JMHA(config-line)#password CHOCO
 SW-Lab1-JMHA(config-line)#login
 SW-Lab1-JMHA(config-line)#end
+SW-Lab1-JMHA#configure terminal
+SW-Lab1-JMHA(config)#vlan 99
+SW-Lab1-JMHA(config-vlan)#name GESTION
+SW-Lab1-JMHA(config-vlan)#exit
+SW-Lab1-JMHA(config)#vlan 111
+SW-Lab1-JMHA(config-vlan)#name native
+SW-Lab1-JMHA(config-vlan)#exit
+SW-Lab1-JMHA(config)#vlan 999
+SW-Lab1-JMHA(config-vlan)#name balckhole
+SW-Lab1-JMHA(config-vlan)#end
 ````
 <br>
 
